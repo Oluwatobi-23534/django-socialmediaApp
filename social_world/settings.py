@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-29yaj+vsw6i266nye!q40bzo8=gyr0lub=mjtfgv$2n&%as$^^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = "social_world.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "fD*-DA1DB*EF4-3A56AcE5FdeGbCdfeB",
+        "HOST": "roundhouse.proxy.rlwy.net",
+        "PORT": "32739",
     }
 }
 
@@ -118,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticFILES")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "staticfiles")
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Default primary key field type

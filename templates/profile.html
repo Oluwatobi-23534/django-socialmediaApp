@@ -57,7 +57,7 @@
 					{% else %}
 					<a data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</button></a>
 					{% endif %}
-					
+
 					</div>
 				</form>
 
@@ -74,12 +74,12 @@
 							<div class="user-avatar">
 								<figure>
 									<img src="{{user_profile.profileimg.url}}" style="height: 250px; width: 100%;" alt="">
-									{% comment %} <form class="edit-phto">
+									<!-- <form class="edit-phto">
 										<i class="fa fa-camera-retro"></i>
 										<label class="fileContainer">
-											<a href="#account-settings">{{user_profile.profileimg.url}}</a>
+											<a href="#account-settings">Upload Profile Photo</a>
 										</label>
-									</form> {% endcomment %}
+									</form> -->
 								</figure>
 							</div>
 						</div>
@@ -115,7 +115,7 @@
 		</section><!-- top area -->
 		<section>
 			<div class="bio">
-				{{user_profile.bio}}
+					{{user_profile.bio}}
 			</div>
 		</section>
 		
@@ -152,6 +152,7 @@
 												<img src="{{post.image.url}}" style="height: 250px; width: 300px;" alt=""></a>
 										</li>
 										{% endfor %}
+										
 										
 										
 									</ul>
